@@ -1,5 +1,7 @@
 import React from "react";
 import { backgroundImage } from "../../assets/img";
+import Campaign from "./Campaign";
+import Motto from "./Motto";
 import Services from "./Services";
 import Work from "./Work";
 
@@ -16,9 +18,11 @@ const Landing = () => {
         </div>
         <div className="absolute top-0 left-0 h-[60vh] w-full bg-black bg-opacity-50"></div>
         <div className="absolute top-0 left-0 grid h-[70vh] w-full place-items-center">
-          <div className="container grid place-items-center gap-5 mt-20">
-            <h1 className="text-3xl text-white text-center">Slogan gone wrong</h1>
-            <button className="cursor-pointer rounded-xl bg-primary px-5 py-2 text-2xl font-semibold tracking-widest text-white hover:bg-slate-300 hover:text-black">
+          <div className="container mt-20 grid place-items-center gap-5">
+            <h1 className="text-center text-3xl text-white">
+              Slogan gone wrong
+            </h1>
+            <button className="cursor-pointer rounded-xl bg-primary px-5 py-2 text-xl font-semibold tracking-widest text-white hover:bg-slate-300 hover:text-black">
               Donate
             </button>
           </div>
@@ -26,6 +30,8 @@ const Landing = () => {
       </div>
       <Services />
       <Work />
+      <Campaign />
+      <Motto />
     </>
   );
 };
