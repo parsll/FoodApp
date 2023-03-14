@@ -1,17 +1,11 @@
 import { backgroundImage } from "../assets/img";
-<<<<<<< HEAD
 import NavBar from "../Components/Header/NavBar";
-=======
->>>>>>> 92030e8f29913364a8be562bf301caf32d984271
 import Founders from "./Founders";
 
 const About = () => {
   return (
     <>
-<<<<<<< HEAD
       <NavBar />
-=======
->>>>>>> 92030e8f29913364a8be562bf301caf32d984271
       <div className="relative ">
         <div className="overflow-hidden">
           <img
@@ -32,7 +26,6 @@ const About = () => {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
       <div className="mt-20 px-[15rem]">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum sed
@@ -68,17 +61,3 @@ const About = () => {
   );
 };
 export default About;
-=======
-      <div className="px-[15rem] mt-20">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum sed provident modi, quas sunt quae consequuntur quisquam eaque saepe non quo laboriosam vitae atque voluptatem aut culpa asperiores! Commodi adipisci fugiat quam error quas voluptatum ex sapiente molestias, soluta, a ad architecto fuga magni voluptatibus distinctio nesciunt dolorum numquam aliquam quia consectetur quis? Maiores aliquam laboriosam fuga placeat excepturi molestiae, animi at blanditiis corrupti, fugit totam eum explicabo voluptatibus atque illo, ducimus officiis autem? Cumque est itaque aliquid suscipit magni et exercitationem ab tempora blanditiis! Dolore doloremque quo nesciunt porro numquam! Soluta sint repellat doloribus dolor a reprehenderit voluptates molestiae?
-        </p>
-        <p className="pt-10 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex repudiandae omnis ipsa unde blanditiis sapiente asperiores. Earum eligendi fuga hic laborum iusto eum veniam doloribus at perspiciatis modi quaerat velit nam similique, maxime aspernatur repudiandae sint et aut expedita quod enim distinctio dolorum! Repudiandae provident distinctio consectetur adipisci nobis ratione inventore incidunt, reiciendis rem harum asperiores at quas cupiditate dolores nesciunt atque ea explicabo hic consequatur voluptates et voluptatibus odit in! Alias error ut asperiores totam quaerat incidunt. Pariatur error iure quae esse unde aliquid quos molestias ad numquam nemo dolore deserunt, provident ipsam? Odit praesentium sequi maxime ipsa quibusdam.</p>
-      </div>
-      
-      <Founders />
-    </>
-  );
-}
-export default About;
->>>>>>> 92030e8f29913364a8be562bf301caf32d984271
