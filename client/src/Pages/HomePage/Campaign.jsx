@@ -18,9 +18,9 @@ const Campaign = () => {
                 <div className="h-1 w-20 rounded bg-indigo-500"></div>
               </div>
               <p className="w-full leading-relaxed text-gray-500 lg:w-1/2">
-                Food Distribution Campaign in Gorkha. Coke started its Share a
-                Coke campaign by replacing its brand name on the bottle of Coke
-                with 150 popular names and adding the “Share a Coke” tagline.
+                Food Distribution Campaign in Gorkha. Lorem ipsum dolor sit amet
+                consectetur, adipisicing elit. Molestias ipsam rem voluptatibus
+                neque eveniet vel dolorem quas repellat quis recusandae?
               </p>
             </div>
             <div className="-m-4 flex flex-wrap">

@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     extend: {
       'colors': {
-        'primary': '#899976',
+        'primary': '#b99976',
       },
       screens: {
         '3xl': '1600px',
@@ -14,5 +14,6 @@ module.exports = {
       'Poppins': 'Poppins, sans-serif',
     },
   },
-  plugins: [],
+  plugins: [
+  ],
 };

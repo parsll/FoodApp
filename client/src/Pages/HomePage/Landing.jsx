@@ -1,5 +1,7 @@
 import React from "react";
 import { backgroundImage } from "../../assets/img";
+import Footer from "../../Components/Footer/Footer";
+import NavBar from "../../Components/Header/NavBar";
 import Campaign from "./Campaign";
 import Motto from "./Motto";
 import Services from "./Services";
@@ -8,6 +10,7 @@ import Work from "./Work";
 const Landing = () => {
   return (
     <>
+      <NavBar />
       <div className="relative bg-slate-500">
         <div className="overflow-hidden">
           <img
@@ -32,6 +35,7 @@ const Landing = () => {
       <Work />
       <Campaign />
       <Motto />
+      <Footer />
     </>
   );
 };
