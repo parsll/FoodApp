@@ -12,22 +12,22 @@ const NavBar = () => {
       <Header />
       <div className="body-font bg-primary text-black">
         <div className="container mx-auto flex flex-wrap items-center justify-between p-5">
-          <a className="title-font flex w-fit items-center justify-center font-medium text-black">
+          <Link to="/" className="title-font flex w-fit items-center justify-center font-medium text-black">
             <span className="cursor-pointer text-xl">Logo</span>
-          </a>
+          </Link>
           <nav className="hidden w-8/12 flex-wrap items-center justify-around text-base md:ml-auto md:flex lg:w-5/12">
-            <a className="cursor-pointer text-white hover:text-slate-400">
+            <Link to="/" className="cursor-pointer text-white hover:text-slate-400">
               Home
-            </a>
-            <a className="cursor-pointer text-white hover:text-slate-400">
+            </Link>
+            <Link to="/about" className="cursor-pointer text-white hover:text-slate-400">
               About Us
-            </a>
-            <a className="cursor-pointer text-white hover:text-slate-400">
+            </Link>
+            <Link to="/ourprogram" className="cursor-pointer text-white hover:text-slate-400">
               Our Program
-            </a>
-            <a className="cursor-pointer text-white hover:text-slate-400">
+            </Link>
+            <Link to="" className="cursor-pointer text-white hover:text-slate-400">
               Partners
-            </a>
+            </Link>
           </nav>
           <i
             className="fa-solid fa-bars flex md:hidden"
@@ -48,18 +48,18 @@ const NavBar = () => {
         }
       >
         <nav className="grid w-full place-items-center">
-          <a className="flex h-10 w-full cursor-pointer items-center justify-center hover:bg-slate-700 hover:text-white">
+          <Link to="" className="flex h-10 w-full cursor-pointer items-center justify-center hover:bg-slate-700 hover:text-white">
             Home
-          </a>
-          <a className="flex h-10 w-full cursor-pointer items-center justify-center hover:bg-slate-700 hover:text-white">
+          </Link>
+          <Link to="" className="flex h-10 w-full cursor-pointer items-center justify-center hover:bg-slate-700 hover:text-white">
             About Us
-          </a>
-          <a className="flex h-10 w-full cursor-pointer items-center justify-center hover:bg-slate-700 hover:text-white">
+          </Link>
+          <Link to="" className="flex h-10 w-full cursor-pointer items-center justify-center hover:bg-slate-700 hover:text-white">
             Our Program
-          </a>
-          <a className="flex h-10 w-full cursor-pointer items-center justify-center hover:bg-slate-700 hover:text-white">
+          </Link>
+          <Link to="" className="flex h-10 w-full cursor-pointer items-center justify-center hover:bg-slate-700 hover:text-white">
             Partners
-          </a>
+          </Link>
         </nav>
       </div>
     </>
