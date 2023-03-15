@@ -74,13 +74,15 @@ const Donation = () => {
             </div>
           </div>
           <div className="my-10 grid h-fit gap-5 p-5">
-            <h1 className="text-center text-3xl font-semibold">Donation Methods</h1>
+            <h1 className="text-center text-3xl font-semibold">
+              Donation Methods
+            </h1>
             <div className="grid gap-1">
               <label htmlFor="" className="font-semibold">
                 Cash
               </label>
-              <Link to="" className="w-72 h-fit">
-              <input
+              <Link to="" className="h-fit w-72">
+                <input
                   type="number"
                   placeholder="$1000"
                   className="w-60 rounded-lg bg-gray-100 px-5 py-2 text-black placeholder:text-gray-600 placeholder:opacity-50 focus:border focus:outline-none sm:w-72 md:w-72 lg:w-[340px]"
@@ -91,7 +93,7 @@ const Donation = () => {
               <label htmlFor="" className="font-semibold">
                 Credit Card
               </label>
-              <Link to="" className="w-72 h-fit">
+              <Link to="" className="h-fit w-72">
                 <img src={creditcard} alt="" />
               </Link>
             </div>
@@ -99,7 +101,7 @@ const Donation = () => {
               <label htmlFor="" className="font-semibold">
                 Paypal
               </label>
-              <Link to="" className="w-72 h-fit">
+              <Link to="" className="h-fit w-72">
                 <img src={paypal} alt="" />
               </Link>
             </div>

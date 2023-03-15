@@ -26,7 +26,10 @@ const Landing = () => {
             <h1 className="text-center text-3xl text-white">
               Slogan gone wrong
             </h1>
-            <Link to="/donation" className="cursor-pointer rounded-xl bg-primary px-5 py-2 text-xl font-semibold tracking-widest text-white hover:bg-slate-300 hover:text-black">
+            <Link
+              to="/donation"
+              className="cursor-pointer rounded-xl bg-primary px-5 py-2 text-xl font-semibold tracking-widest text-white hover:bg-slate-300 hover:text-black"
+            >
               Donate
             </Link>
           </div>

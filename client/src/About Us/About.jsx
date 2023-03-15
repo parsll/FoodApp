@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { backgroundImage } from "../assets/img";
 import NavBar from "../Components/Header/NavBar";
 import Founders from "./Founders";
@@ -6,7 +7,7 @@ const About = () => {
   return (
     <>
       <NavBar />
-      <div className="relative ">
+      <div className="relative bg-slate-500">
         <div className="overflow-hidden">
           <img
             src={backgroundImage}
@@ -20,39 +21,25 @@ const About = () => {
             <h1 className="text-center text-3xl text-white">
               Slogan gone wrong
             </h1>
-            <button className="cursor-pointer rounded-xl bg-primary px-5 py-2 text-xl font-semibold tracking-widest text-white hover:bg-slate-300 hover:text-black">
+            <Link
+              to="/donation"
+              className="cursor-pointer rounded-xl bg-primary px-5 py-2 text-xl font-semibold tracking-widest text-white hover:bg-slate-300 hover:text-black"
+            >
               Donate
-            </button>
+            </Link>
           </div>
         </div>
       </div>
-      <div className="mt-20 px-[15rem]">
+      <div className="container my-10 mx-auto px-5 text-justify">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum sed
           provident modi, quas sunt quae consequuntur quisquam eaque saepe non
           quo laboriosam vitae atque voluptatem aut culpa asperiores! Commodi
-          adipisci fugiat quam error quas voluptatum ex sapiente molestias,
-          soluta, a ad architecto fuga magni voluptatibus distinctio nesciunt
-          dolorum numquam aliquam quia consectetur quis? Maiores aliquam
-          laboriosam fuga placeat excepturi molestiae, animi at blanditiis
-          corrupti, fugit totam eum explicabo voluptatibus atque illo, ducimus
-          officiis autem? Cumque est itaque aliquid suscipit magni et
-          exercitationem ab tempora blanditiis! Dolore doloremque quo nesciunt
-          porro numquam! Soluta sint repellat doloribus dolor a reprehenderit
-          voluptates molestiae?
+          adipisci fugiat quam error quas voluptatum ex sapiente
         </p>
         <p className="pt-10 text-sm">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
           repudiandae omnis ipsa unde blanditiis sapiente asperiores. Earum
-          eligendi fuga hic laborum iusto eum veniam doloribus at perspiciatis
-          modi quaerat velit nam similique, maxime aspernatur repudiandae sint
-          et aut expedita quod enim distinctio dolorum! Repudiandae provident
-          distinctio consectetur adipisci nobis ratione inventore incidunt,
-          reiciendis rem harum asperiores at quas cupiditate dolores nesciunt
-          atque ea explicabo hic consequatur voluptates et voluptatibus odit in!
-          Alias error ut asperiores totam quaerat incidunt. Pariatur error iure
-          quae esse unde aliquid quos molestias ad numquam nemo dolore deserunt,
-          provident ipsam? Odit praesentium sequi maxime ipsa quibusdam.
         </p>
       </div>
 

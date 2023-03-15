@@ -14,7 +14,7 @@ const IntroCard = () => {
           <div className="grid w-[25rem] gap-3 rounded-md bg-white p-5 px-10">
             <div className="relative flex items-center">
               <span
-                className="absolute -right-8 cursor-pointer bg-transparent"
+                className="absolute -right-5 cursor-pointer bg-transparent sm:-right-8"
                 onClick={onClickHandler}
               >
                 &#x274C;
@@ -70,7 +70,7 @@ const IntroCard = () => {
 
       <div className="flex flex-wrap lg:mx-10">
         <div className="mx-auto flex-col">
-          <div className="h-content relative my-5 w-[15rem] rounded-lg bg-[#F5F5F5] p-3">
+          <div className="h-content relative my-5 w-[22rem] rounded-lg bg-[#F5F5F5] p-3 sm:w-[15rem]">
             <div className="absolute top-0 right-0" onClick={onClickHandler}>
               <button
                 type="submit"
@@ -125,7 +125,7 @@ const IntroCard = () => {
               <p className="text-sm">Chabahil, Kathmandu</p>
             </div>
           </div>
-          <div className="h-content my-5 w-[15rem] rounded-lg bg-[#F5F5F5] p-3">
+          <div className="h-content my-5 w-[22rem] rounded-lg bg-[#F5F5F5] p-3 sm:w-[15rem]">
             <h1 className="mb-4 text-xl font-semibold">Your Info</h1>
             <div className="">
               <p className="text-lg">Description</p>
