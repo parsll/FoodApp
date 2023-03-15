@@ -1,13 +1,58 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Button from "../../ResuableComponents/Button";
+import React, { useState } from "react";
 import InputField from "../../ResuableComponents/InputField";
-import Header from "../Header/Header";
+import Button from "../../UI/Button/Button";
+import { Link, useNavigate } from "react-router-dom";
+
+import { doPost } from "../../Services/Axios";
+import {
+  setAccessTokenFromLocalStorage,
+  setUnverifiedEmailToLocalStorage,
+  setUsernameToLocalStorage,
+} from "../../Services/Helpers";
+import { useForm } from "../../Services/useForm";
 
 const SignUp = () => {
+  const [error, setError] = useState("");
+  const router = useNavigate();
+
+  const initialState = {
+    firstName: "",
+    lastName: "",
+    email: "",
+    newPassword: "",
+    confirmPassword: "",
+  };
+  const { handleChange, errors, states, validate } = useForm(initialState);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (validate()) {
+        const resp = await doPost("/user/register", {
+          firstname: states.firstName,
+          lastname: states.lastName,
+          email: states.email,
+          password: states.newPassword,
+          confirmPassword: states.confirmPassword,
+        });
+        setUnverifiedEmailToLocalStorage(states.email);
+        setUsernameToLocalStorage(states.email);
+        router("/otp");
+      } else {
+      }
+    } catch (error) {
+      if (
+        error.response &&
+        error.response.data &&
+        typeof error.response.data === "string"
+      ) {
+        setError(error.response.data);
+      }
+    }
+  };
+  console.log(errors);
   return (
     <>
-      <Header />
       <div className="px-10">
         <div className="m-auto flex-row justify-center">
           <h1 className=" text-center text-[40px]">Hello</h1>
@@ -28,8 +73,10 @@ const SignUp = () => {
                 placeholder="first name"
                 name="firstName"
                 id="fname"
+                handleChange={handleChange}
                 customStyle={{ width: "calc(50% - 1.25rem)" }}
                 title="First Name"
+                error={errors.firstName || error}
               />
               <InputField
                 type="text"
@@ -37,9 +84,11 @@ const SignUp = () => {
                 name="lastName"
                 id="lname"
                 required
+                handleChange={handleChange}
                 className="  mx-auto mb-2 mr-5 h-10 w-36 rounded-lg border-2 border-green-50 bg-gray-200 text-center"
                 title="Last Name"
                 customStyle={{ width: "50%" }}
+                error={errors.lastName}
               />
             </div>
             <div>
@@ -50,8 +99,10 @@ const SignUp = () => {
                   name="email"
                   id="email"
                   required
+                  handleChange={handleChange}
                   className="  mx-auto mb-2 mr-5 h-10 w-80 rounded-lg border-2 border-green-50  bg-gray-200"
                   title="Email"
+                  error={errors.email}
                 />
                 <InputField
                   type="password"
@@ -59,8 +110,10 @@ const SignUp = () => {
                   name="newPassword"
                   id="password"
                   required
+                  handleChange={handleChange}
                   className="mx-auto mb-2 mr-5 h-10 w-80 rounded-lg border-2 border-green-50  bg-gray-200"
                   title="Password"
+                  error={errors.newPassword}
                 />
                 <InputField
                   type="password"
@@ -68,17 +121,22 @@ const SignUp = () => {
                   name="confirmPassword"
                   id="rpassword"
                   required
+                  handleChange={handleChange}
                   className="mx-auto mb-3 mr-5 h-10 w-80 rounded-lg border-2 border-green-50 bg-gray-200"
                   title="Re-enter Password"
+                  error={errors.confirmPassword}
                 />
               </div>
-              <Button text={"Create Account"} />
+              <Button
+                text={"Create Account"}
+                onClick={(e) => handleSubmit(e)}
+              />
               <div className="my-3 flex justify-start">
                 <p>
                   Already have an account? &nbsp;
                   <Link
                     to="/login"
-                    className="cursor-pointer font-semibold text-primary hover:underline"
+                    className="cursor-pointer font-semibold text-[#1D7874] hover:underline"
                   >
                     Sign In
                   </Link>

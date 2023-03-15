@@ -7,6 +7,7 @@ import Program from "./OurProgram/Program";
 import Admin from "./Pages/AdminPage/Admin";
 import Dashboard from "./Pages/AdminPage/Dashboard";
 import Donation from "./Pages/Donation/Donation";
+import Otp from "./Pages/EnterOtp/EnterOtp";
 import Landing from "./Pages/HomePage/Landing";
 import DonateDes from "./Pages/Products/DonateDes";
 import Products from "./Pages/Products/Products";
@@ -23,6 +24,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Landing />} />
+          <Route path="/otp" element={<Otp />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<SignUp />} />
           <Route path="/about" element={<About />} />
