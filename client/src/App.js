@@ -8,7 +8,11 @@ import Admin from "./Pages/AdminPage/Admin";
 import Dashboard from "./Pages/AdminPage/Dashboard";
 import Donation from "./Pages/Donation/Donation";
 import Landing from "./Pages/HomePage/Landing";
+import Events from "./Pages/UserProfile/Events";
+import Donate from "./Pages/UserProfile/Products/Donate";
+import Request from "./Pages/UserProfile/Products/Request";
 import Profile from "./Pages/UserProfile/Profile";
+import Sells from "./Pages/UserProfile/Sells";
 
 function App() {
   return (
@@ -18,13 +22,19 @@ function App() {
           <Route path="/" element={<Landing />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<SignUp />} />
-          <Route path="/profile" element={<Profile />} />
           <Route path="/about" element={<About />} />
           <Route path="/donation" element={<Donation />} />
           <Route path="/ourprogram" element={<Program />} />
+          <Route path="/donate" element={<Donate />} />
+          <Route path="/request" element={<Request />} />
           <Route path="admin" element={<Admin />}>
             <Route index element={<Dashboard />} />
             <Route path="dashboard" element={<Dashboard />} />
+          </Route>
+          <Route path="profile" element={<Profile />}>
+            <Route index element={<Events />} />
+            <Route path="events" element={<Events />} />
+            <Route path="sells" element={<Sells />} />
           </Route>
         </Routes>
       </BrowserRouter>

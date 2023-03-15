@@ -16,7 +16,7 @@ const NavBar = () => {
   return (
     <>
       <div className="container mt-5 flex justify-between px-5">
-        <div className="place-items-left grid h-20 w-20 overflow-hidden rounded-full bg-red-300">
+        <div className="place-items-left grid h-14 w-14 overflow-hidden rounded-full bg-red-300">
           <Link to={"/"}>
             <img
               src={backgroundImage}
@@ -49,9 +49,6 @@ const NavBar = () => {
               >
                 View Profile
               </Link>
-              <h2 className="font-regular cursor-pointer rounded-lg px-5 py-1 text-lg hover:bg-[#F5F5F5]">
-                Booking
-              </h2>
               <h2 className="font-regular cursor-pointer rounded-lg px-5 py-1 text-lg hover:bg-[#F5F5F5]">
                 Sign Out
               </h2>
