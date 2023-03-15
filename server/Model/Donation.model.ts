@@ -21,6 +21,10 @@ export class Donation {
   company_name: string;
   @prop({})
   contact_number: string;
+  @prop({})
+  address: string;
+  @prop({})
+  email: string;
 }
 
 export const DonationModel = getModelForClass(Donation, {

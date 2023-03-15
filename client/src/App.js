@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import About from "./About Us/About";
 import LoginPage from "./Components/Form/LoginPage";
@@ -19,10 +20,11 @@ import Donate from "./Pages/UserProfile/Products/Donate";
 import Request from "./Pages/UserProfile/Products/Request";
 import Profile from "./Pages/UserProfile/Profile";
 import Sells from "./Pages/UserProfile/Sells";
-
+import "react-toastify/dist/ReactToastify.css";
 function App() {
   return (
     <>
+      <ToastContainer />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Landing />} />
