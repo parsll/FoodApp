@@ -8,6 +8,9 @@ import Admin from "./Pages/AdminPage/Admin";
 import Dashboard from "./Pages/AdminPage/Dashboard";
 import Donation from "./Pages/Donation/Donation";
 import Landing from "./Pages/HomePage/Landing";
+import DonateDes from "./Pages/Products/DonateDes";
+import Products from "./Pages/Products/Products";
+import RequestDes from "./Pages/Products/RequestDes";
 import Events from "./Pages/UserProfile/Events";
 import Donate from "./Pages/UserProfile/Products/Donate";
 import Request from "./Pages/UserProfile/Products/Request";
@@ -23,10 +26,13 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<SignUp />} />
           <Route path="/about" element={<About />} />
+          <Route path="/products" element={<Products />} />
           <Route path="/donation" element={<Donation />} />
           <Route path="/ourprogram" element={<Program />} />
           <Route path="/donate" element={<Donate />} />
           <Route path="/request" element={<Request />} />
+          <Route path="/requestdescription" element={<RequestDes />} />
+          <Route path="/donatedescription" element={<DonateDes />} />
           <Route path="admin" element={<Admin />}>
             <Route index element={<Dashboard />} />
             <Route path="dashboard" element={<Dashboard />} />
