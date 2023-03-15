@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { backgroundImage } from "../../assets/img";
+import { backgroundImage, Logo } from "../../assets/img";
 
 const NavBar = () => {
   const [display, setDisplay] = useState(true);
@@ -16,13 +16,9 @@ const NavBar = () => {
   return (
     <>
       <div className="container mt-5 flex justify-between px-5">
-        <div className="place-items-left grid h-14 w-14 overflow-hidden rounded-full bg-red-300">
+        <div className="place-items-left grid w-28 overflow-hidden">
           <Link to={"/"}>
-            <img
-              src={backgroundImage}
-              alt="logo"
-              className="h-full w-full object-cover"
-            />
+            <img src={Logo} alt="logo" className="h-full w-full object-cover" />
           </Link>
         </div>
         <div className="flex gap-3">

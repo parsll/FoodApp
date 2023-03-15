@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { Logo, LogoNoBack } from "../../assets/img";
 import Header from "./Header";
 
 const NavBar = () => {
@@ -12,12 +13,15 @@ const NavBar = () => {
       <Header />
       <div className="body-font bg-primary text-black">
         <div className="container mx-auto flex flex-wrap items-center justify-between p-5">
-          <Link
-            to="/"
-            className="title-font flex w-fit items-center justify-center font-medium text-black"
-          >
-            <span className="cursor-pointer text-xl">Logo</span>
-          </Link>
+          <div className="place-items-left grid w-20 overflow-hidden">
+            <Link to={"/"}>
+              <img
+                src={LogoNoBack}
+                alt="logo"
+                className="h-full w-full object-cover"
+              />
+            </Link>
+          </div>
           <nav className="hidden w-8/12 flex-wrap items-center justify-around text-base md:ml-auto md:flex lg:w-5/12">
             <Link
               to="/"
