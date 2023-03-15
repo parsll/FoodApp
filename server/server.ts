@@ -3,6 +3,7 @@ import helmet, { xssFilter } from "helmet";
 import userRoutes from "./routes/User.routes";
 import db from "./config/Database/database";
 import adminRoutes from "./routes/Admin.routes";
+import donationRoutes from "./routes/Donation.routes";
 import cors from "cors";
 
 const app = express();
@@ -46,5 +47,6 @@ process.on("SIGINT", function () {
 
 app.use("/api/v1/admin", adminRoutes);
 app.use("/api/v1/user", userRoutes);
+app.use("/api/v1/donate", donationRoutes);
 
-app.listen(9000);
+app.listen(9001);

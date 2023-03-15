@@ -1,9 +1,41 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
+import { toast } from "react-toastify";
 import { creditcard, paypal } from "../../assets/img";
 import Header from "../../Components/Header/Header";
+import { doPost } from "../../Services/Axios";
+import { useForm } from "../../Services/useForm";
 
 const Donation = () => {
+  const initialState = {
+    amount: "",
+    donor_name: "",
+    donor_note: "",
+    company_name: "",
+    contact_number: "",
+    address: "",
+    email: "",
+  };
+  const { errors, handleChange, states, validate } = useForm(initialState);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      console.log(errors, validate());
+      if (validate()) {
+        const resp = await doPost("/donate", {
+          ...states,
+        });
+        console.log(resp);
+      } else {
+        return toast.error("Please Fill all fields");
+      }
+      return toast.success("Donation successful");
+    } catch (error) {
+      console.log(error);
+      toast.error("Error while donating");
+    }
+  };
+
   return (
     <>
       <Header />
@@ -21,7 +53,13 @@ const Donation = () => {
                 <input
                   type="text"
                   placeholder="Full Name"
-                  className="w-80 rounded-lg bg-gray-100 px-5 py-2 text-black placeholder:text-gray-600 placeholder:opacity-50 focus:border focus:outline-none sm:w-72 md:w-72 lg:w-[340px]"
+
+                  onChange={handleChange}
+                  name="donor_name"
+                  className={` w-80 rounded-lg bg-gray-100 px-5 py-2 text-black placeholder:text-gray-600 placeholder:opacity-50 focus:border focus:outline-none sm:w-72 md:w-72 lg:w-[340px] ${
+                    errors.donor_name && "border-red-400"
+                  }`}
+
                 />
               </div>
               <div className="grid gap-2">
@@ -31,7 +69,11 @@ const Donation = () => {
                 <textarea
                   type="text"
                   placeholder="Some words..."
+
+                  name="donor_note"
+                  onChange={handleChange}
                   className="w-80 resize-none rounded-lg bg-gray-100 px-5 py-2 text-black placeholder:text-gray-600 placeholder:opacity-50 focus:border focus:outline-none sm:w-72 md:w-72 lg:w-[340px]"
+
                 ></textarea>
               </div>
               <div className="grid gap-2">
@@ -39,9 +81,13 @@ const Donation = () => {
                   Company Name
                 </label>
                 <textarea
+                  name="company_name"
                   type="text"
                   placeholder="Name of your organization (optional)"
+
+                  onChange={handleChange}
                   className="w-80 resize-none rounded-lg bg-gray-100 px-5 py-2 text-black placeholder:text-gray-600 placeholder:opacity-50 focus:border focus:outline-none sm:w-72 md:w-72 lg:w-[340px]"
+
                 />
               </div>
               <div className="grid gap-2">
@@ -50,8 +96,12 @@ const Donation = () => {
                 </label>
                 <input
                   type="text"
-                  placeholder="Phone Number..."
+
+                  placeholder="Email ..."
+                  name="email"
+                  onChange={handleChange}
                   className=" w-80 rounded-lg bg-gray-100 px-5 py-2 text-black placeholder:text-gray-600 placeholder:opacity-50 focus:border focus:outline-none sm:w-72 md:w-72 lg:w-[340px]"
+
                 />
               </div>
               <div className="grid gap-2">
@@ -61,19 +111,26 @@ const Donation = () => {
                 <textarea
                   type="text"
                   placeholder="Your mailing address..."
+
+                  name="address"
+                  onChange={handleChange}
                   className="w-80 resize-none rounded-lg bg-gray-100 px-5 py-2 text-black placeholder:text-gray-600 placeholder:opacity-50 focus:border focus:outline-none sm:w-72 md:w-72 lg:w-[340px]"
+
                 />
               </div>
 
               <button
                 type="submit"
+                onClick={handleSubmit}
                 className="m-auto cursor-pointer rounded-xl bg-primary px-5 py-2 text-xl font-semibold tracking-widest text-white hover:bg-slate-300 hover:text-black"
               >
                 Submit
               </button>
             </div>
           </div>
+
           <div className="my-10 grid h-fit gap-5">
+
             <h1 className="text-center text-3xl font-semibold">
               Donation Methods
             </h1>
@@ -81,11 +138,15 @@ const Donation = () => {
               <label htmlFor="" className="font-semibold">
                 Cash
               </label>
-              <Link to="" className="h-fit w-80">
+
+              <Link to="" className="w-72 h-fit">
                 <input
+                  name="amount"
                   type="number"
                   placeholder="$1000"
+                  onChange={handleChange}
                   className="w-80 rounded-lg bg-gray-100 px-5 py-2 text-black placeholder:text-gray-600 placeholder:opacity-50 focus:border focus:outline-none sm:w-72 md:w-72 lg:w-[340px]"
+
                 />
               </Link>
             </div>
