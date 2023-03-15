@@ -8,8 +8,11 @@ const Events = () => {
   };
   return (
     <>
-      <div className="flex w-full justify-end" onClick={onClickHandler}>
-        <div className="flex cursor-pointer items-center rounded-lg bg-white px-3 py-1 font-semibold text-primary">
+      <div className="flex w-full justify-end">
+        <div
+          onClick={onClickHandler}
+          className="flex cursor-pointer items-center rounded-lg bg-white px-3 py-1 font-semibold text-primary"
+        >
           <i className="fa-solid fa-plus mx-3"></i>
           <button type="submit" className="">
             Add
@@ -21,7 +24,7 @@ const Events = () => {
           <div className="grid w-[25rem] gap-3 rounded-md bg-white p-5 px-10">
             <div className="relative flex items-center">
               <span
-                className="absolute -right-8 cursor-pointer bg-transparent"
+                className="absolute -right-5 cursor-pointer bg-transparent sm:-right-8"
                 onClick={onClickHandler}
               >
                 &#x274C;
@@ -69,7 +72,7 @@ const Events = () => {
                 type="date"
                 name=""
                 id=""
-                className="text-md rounded-lg border-none bg-[#f5f5f5] px-3 py-1 outline-none"
+                className="text-md w-full rounded-lg border-none bg-[#f5f5f5] px-3 py-1 outline-none"
               />
             </div>
             <button className="m-auto w-fit rounded-md bg-primary py-2 px-14 text-white">

@@ -13,8 +13,8 @@ const Footer = () => {
               className="h-full w-full object-cover"
             />
           </div>
-          <div className="flex h-fit flex-wrap justify-evenly gap-14 px-14">
-            <div className="w-content leading-10">
+          <div className="flex h-fit flex-wrap justify-around gap-14 px-14">
+            <div className="w-content leading-10 w-[20rem]">
               <h1 className="mb-5 text-[2rem] font-semibold text-primary">
                 Contact
               </h1>
@@ -34,7 +34,7 @@ const Footer = () => {
                 </a>
               </p>
             </div>
-            <div className="w-content leading-10">
+            <div className="w-content leading-10 w-[20rem]">
               <h1 className="mb-5 text-[2rem] font-semibold">
                 Terms and Services
               </h1>
@@ -59,7 +59,7 @@ const Footer = () => {
                 </a>
               </p>
             </div>
-            <div className="w-content leading-10">
+            <div className="w-content leading-10 w-[20rem]">
               <h1 className="mb-5 text-[2rem] font-semibold">Social Media</h1>
               <p>
                 <a href="#" className="hover:text-slate-100">

@@ -4,7 +4,7 @@ const Request = () => {
   return (
     <>
       <section class="body-font text-gray-600">
-        <div class="container mx-auto flex flex-wrap items-center px-5 py-24">
+        <div class="container mx-auto flex flex-wrap items-center px-5 py-10">
           <div class="pr-0 md:w-1/2 md:pr-16 lg:w-3/5 lg:pr-0">
             <h1 class="title-font text-3xl font-medium text-gray-900">
               About Request
@@ -56,7 +56,7 @@ const Request = () => {
                 class="w-full resize-none rounded border border-gray-300 bg-white py-1 px-3 text-base leading-8 text-gray-700 outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
               />
             </div>
-            <button class="rounded border-0 bg-indigo-500 py-2 px-8 text-lg text-white hover:bg-indigo-600 focus:outline-none">
+            <button class="rounded border-0 bg-primary py-2 px-8 text-lg text-white hover:bg-opacity-70 focus:outline-none">
               Request
             </button>
             <p class="mt-3 text-xs text-gray-500">

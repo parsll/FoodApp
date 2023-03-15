@@ -77,28 +77,28 @@ const NavBar = () => {
       >
         <nav className="grid w-full place-items-center">
           <Link
-            to=""
+            to="/"
             className="flex h-10 w-full cursor-pointer items-center justify-center hover:bg-slate-700 hover:text-white"
           >
             Home
           </Link>
           <Link
-            to=""
+            to="/about"
             className="flex h-10 w-full cursor-pointer items-center justify-center hover:bg-slate-700 hover:text-white"
           >
             About Us
           </Link>
           <Link
-            to=""
+            to="/ourprogram"
             className="flex h-10 w-full cursor-pointer items-center justify-center hover:bg-slate-700 hover:text-white"
           >
             Our Program
           </Link>
           <Link
-            to=""
+            to="/products"
             className="flex h-10 w-full cursor-pointer items-center justify-center hover:bg-slate-700 hover:text-white"
           >
-            Partners
+            Products
           </Link>
         </nav>
       </div>
