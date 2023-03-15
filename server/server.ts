@@ -47,6 +47,6 @@ process.on("SIGINT", function () {
 
 app.use("/api/v1/admin", adminRoutes);
 app.use("/api/v1/user", userRoutes);
-app.use("/api/v1/dontaion", donationRoutes);
+app.use("/api/v1/donate", donationRoutes);
 
 app.listen(9001);

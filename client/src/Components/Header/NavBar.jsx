@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Logo, LogoNoBack } from "../../assets/img";
+import { getAccessTokenFromLocalStorage } from "../../Services/Helpers";
 import Header from "./Header";
 
 const NavBar = () => {
@@ -52,11 +53,19 @@ const NavBar = () => {
             className="fa-solid fa-bars flex md:hidden"
             onClick={onClickHandler}
           ></i>
-          <Link to="/login">
-            <button className="inline-flex items-center rounded border-0 bg-gray-100 py-1 px-3 text-base hover:bg-gray-200 focus:outline-none">
-              SignIn
-            </button>
-          </Link>
+          {getAccessTokenFromLocalStorage() ? (
+            <Link to="/profile">
+              <button className="inline-flex items-center rounded border-0 bg-gray-100 py-1 px-3 text-base hover:bg-gray-200 focus:outline-none">
+                User
+              </button>
+            </Link>
+          ) : (
+            <Link to="/login">
+              <button className="inline-flex items-center rounded border-0 bg-gray-100 py-1 px-3 text-base hover:bg-gray-200 focus:outline-none">
+                SignIn
+              </button>
+            </Link>
+          )}
         </div>
       </div>
       <div
