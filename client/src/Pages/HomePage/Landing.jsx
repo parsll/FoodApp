@@ -24,7 +24,7 @@ const Landing = () => {
         <div className="absolute top-0 left-0 grid h-[70vh] w-full place-items-center">
           <div className="container mt-20 grid place-items-center gap-5">
             <h1 className="text-center text-3xl text-white">
-              Slogan gone wrong
+              Share a meal, share the love: Join hands with Food Share Nepal.
             </h1>
             <Link
               to="/donation"
@@ -37,7 +37,7 @@ const Landing = () => {
       </div>
       <Services />
       <Work />
-      <Campaign />
+      {/* <Campaign /> */}
       <Motto />
       <Footer />
     </>

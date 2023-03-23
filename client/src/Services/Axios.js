@@ -6,7 +6,7 @@ import {
   getAdminAccessTokenFromLocalStorage,
 } from "./Helpers";
 
-export const baseUrl = "http://localhost:9001/api/v1";
+export const baseUrl = "/api/v1";
 
 const instance = axios.create({
   baseURL: baseUrl,

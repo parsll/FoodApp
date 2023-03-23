@@ -8,8 +8,9 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "ts-node server.ts",
-    "dev": "nodemon --delay 500ms server.ts "
+    "start": "node ./builds/server.js",
+    "dev": "nodemon --delay 500ms server.ts ",
+    "build": "tsc"
   },
   "dependencies": {
     "@types/jsonwebtoken": "^9.0.1",

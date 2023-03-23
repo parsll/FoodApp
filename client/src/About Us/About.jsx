@@ -19,7 +19,7 @@ const About = () => {
         <div className="absolute top-0 left-0 grid h-[70vh] w-full place-items-center">
           <div className="container mt-20 grid place-items-center gap-5">
             <h1 className="text-center text-3xl text-white">
-              Slogan gone wrong
+              Share a meal, share the love: Join hands with Food Share Nepal.
             </h1>
             <Link
               to="/donation"
@@ -32,14 +32,12 @@ const About = () => {
       </div>
       <div className="container my-10 mx-auto px-5 text-justify">
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum sed
-          provident modi, quas sunt quae consequuntur quisquam eaque saepe non
-          quo laboriosam vitae atque voluptatem aut culpa asperiores! Commodi
-          adipisci fugiat quam error quas voluptatum ex sapiente
-        </p>
-        <p className="pt-10 text-sm">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
-          repudiandae omnis ipsa unde blanditiis sapiente asperiores. Earum
+          Food Share Nepal is an internet based platform which connects people
+          with excess food and groceries to the people in need in minimum cost.
+          It promotes social and economic sustainability. Our team is working to
+          reduce hunger rate, food wastage and food insecurity in the
+          country.Our goal is to build stronger communities by fostering
+          connections between people and organizations.
         </p>
       </div>
 

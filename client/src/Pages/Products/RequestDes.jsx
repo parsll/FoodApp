@@ -1,7 +1,16 @@
-import React from "react";
-import { backgroundImage } from "../../assets/img";
+import React, { useState } from "react";
+import { toast } from "react-toastify";
+import { backgroundImage, backgroundImage6 } from "../../assets/img";
 
 const RequestDes = () => {
+  const [message, setMessage] = useState("");
+  const handleSubmit = () => {
+    if (message === "") {
+      toast.error("Message is required");
+    } else {
+      toast.success("You Request is successful");
+    }
+  };
   return (
     <>
       <section class="body-font text-gray-600">
@@ -12,7 +21,7 @@ const RequestDes = () => {
           <img
             class="mb-10 w-5/6 rounded object-cover object-center md:w-3/6 lg:w-2/6"
             alt="hero"
-            src={backgroundImage}
+            src={backgroundImage6}
           />
           <div class="mb-16 flex w-full flex-col items-center text-center md:w-2/3">
             <h1 class="title-font mb-4 text-xl font-medium text-gray-900 sm:text-2xl">
@@ -34,10 +43,14 @@ const RequestDes = () => {
                   id="hero-field"
                   name="hero-field"
                   placeholder="Why you request for this meal..."
+                  onChange={(e) => setMessage(e.target.value)}
                   class="w-full rounded border border-gray-300 bg-gray-100 bg-opacity-50 py-1 px-3 text-base leading-8 text-gray-700 outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200"
                 />
               </div>
-              <button class="inline-flex rounded border-0 bg-indigo-500 py-2 px-6 text-lg text-white hover:bg-indigo-600 focus:outline-none">
+              <button
+                onClick={handleSubmit}
+                class="inline-flex rounded border-0 bg-indigo-500 py-2 px-6 text-lg text-white hover:bg-indigo-600 focus:outline-none"
+              >
                 Request
               </button>
             </div>
