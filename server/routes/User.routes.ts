@@ -1,7 +1,9 @@
-import express, { Router } from "express";
+import express, { Router, Request } from "express";
+import { upload } from "../utils/imgUploader";
 import {
   forgotPasswordController,
   getAllUsersContoller,
+  getUserProfileController,
   loginUsersContoller,
   registerUserController,
   resendOtpController,
@@ -13,16 +15,30 @@ import { validate } from "../middlewares/SchemaParser";
 import {
   forgotPasswordBodySchema,
   loginBodySchema,
+  registerBodySchema,
   resendTokenBodySchema,
   resetPasswordSchema,
   tokenBodySchema,
+  userProfileSchema,
   verifyfpotpBodySchema,
 } from "../Schema/User.schema";
+import { authenticateToken } from "../middlewares/Authentication";
 const router = Router();
 
 router.get("/all", getAllUsersContoller);
 router.post("/login", loginUsersContoller);
-router.post("/register", registerUserController);
+router.post(
+  "/register",
+  upload("UserProfile_Images").single("user_profile"),
+  registerUserController
+);
+
+router.get(
+  "/getuserprofile",
+  authenticateToken,
+  validate({ schema: userProfileSchema.body, typeOfReq: "Body" }),
+  getUserProfileController
+);
 
 router.post(
   "/verifyotp",

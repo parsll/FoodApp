@@ -17,7 +17,19 @@ export class User {
   lastname: string;
 
   @prop({ required: true, unique: true })
+  phone: number;
+
+  @prop({ required: true, unique: true })
   email: string;
+
+  @prop({ required: true, unique: true })
+  user_profile: string;
+
+  @prop({ required: true })
+  address: string;
+
+  @prop({ required: true })
+  role: string;
 
   @prop({
     required: true,

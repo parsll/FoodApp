@@ -1,4 +1,6 @@
-import { number, object, string, TypeOf } from "zod";
+import { z, number, object, string, TypeOf } from "zod";
+
+const role = z.enum(["ORGANIZATION", "USER"]);
 
 export const registerBodySchema = {
   body: object({
@@ -14,6 +16,18 @@ export const registerBodySchema = {
       new RegExp(/^[a-z A-Z0-9_\-.]*$/gm),
       "Please enter a valid lastname"
     ),
+    phone: number({
+      required_error: "Last name is required",
+    })
+      .min(10, "cannot be less than 10 characters")
+      .max(10, "Cannote be greater than 10 characters"),
+    address: string({
+      required_error: "Address is required",
+    }),
+    user_profile: string({
+      required_error: "Profile Pic is required",
+    }).max(64, "Image Name cannot be more than 64 length "),
+    role: role,
     email: string({
       required_error: "Email is required",
     }).email("Plz enter a valid email"),
@@ -139,3 +153,10 @@ export const resetPasswordSchema = {
     ),
 };
 export type resetPasswordType = TypeOf<typeof resetPasswordSchema.body>;
+
+export const userProfileSchema = {
+  body: object({
+    username: string({ required_error: "user name is required" }),
+  }),
+};
+export type userProfileBodyType = TypeOf<typeof userProfileSchema.body>;

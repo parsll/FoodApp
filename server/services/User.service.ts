@@ -11,26 +11,34 @@ import {
   resendTokenBodyType,
   resetPasswordType,
   tokenBodyType,
+  userProfileBodyType,
   verifyfpotpBodyType,
 } from "../Schema/User.schema";
-import { sendMail, sendMessageMail } from "../config/Mailer/Mailer";
+import { sendMail } from "../config/Mailer/Mailer";
 
-export async function createUserService({
-  email,
-  password,
-  firstname,
-  lastname,
-}: Omit<registerBodyType, "confirmPassword">): Promise<
-  { response: string } | string | undefined
-> {
+export async function createUserService(
+  email: string,
+  password: string,
+  firstname: string,
+  lastname: string,
+  address: string,
+  role: string,
+  phone: number,
+  user_profile: string
+): Promise<any> {
   try {
     const username = crypto.randomUUID();
     const response = await UserModel.create({
       _id: new mongoose.Types.ObjectId(),
+      username,
+      address,
+      role,
       email,
       password,
       firstname,
       lastname,
+      phone,
+      user_profile,
     });
 
     if (response) {
@@ -48,7 +56,7 @@ export async function createUserService({
     }
   } catch (error: any) {
     if (error.code && error.code === 11000) throw "User already exist" as const;
-    throw "Error";
+    throw error;
   }
 }
 export async function loginUserService({
@@ -224,6 +232,16 @@ export async function findUserService(email: User["email"]) {
 export async function getAllUserService() {
   return await UserModel.find();
 }
+
+export async function getUserProfileService({
+  username,
+}: userProfileBodyType): Promise<any> {
+  return await UserModel.findOne(
+    { username },
+    { firstname: 1, lastname: 1, address: 1, email: 1, phone: 1, _id: 0 }
+  );
+}
+
 export async function deleteUserService(username: User["username"]) {
   return UserModel.findOneAndDelete({
     username,
