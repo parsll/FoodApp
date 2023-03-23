@@ -7,7 +7,7 @@ function FormHeader() {
         <div className="left w-full"></div>
         <div className="right px-10 w-full flex justify-end items-center text-white">
           <i className="fa-solid fa-envelope mx-2"></i>
-          <p>willowdale@gmail.com</p>
+          <p>FoodApp@gmail.com</p>
         </div>
       </div>
     </div>

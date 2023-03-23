@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const Admin_controller_1 = require("../controllers/Admin.controller");
+const Authentication_1 = require("../middlewares/Authentication");
+const SchemaParser_1 = require("../middlewares/SchemaParser");
+const Admin_schema_1 = require("../Schema/Admin.schema");
+const router = (0, express_1.Router)();
+router.post("/register", (0, SchemaParser_1.validate)({ schema: Admin_schema_1.adminRegisterBodySchema.body, typeOfReq: "Body" }), Admin_controller_1.adminRegisterController);
+router.post("/login", (0, SchemaParser_1.validate)({ schema: Admin_schema_1.adminLoginBodySchema.body, typeOfReq: "Body" }), Admin_controller_1.adminLoginController);
+router.post("/resetpassword", Authentication_1.authenticateadmin, (0, SchemaParser_1.validate)({ schema: Admin_schema_1.adminresetPasswordSchema.body, typeOfReq: "Body" }), Admin_controller_1.adminResetPasswordController);
+exports.default = router;

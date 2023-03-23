@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
+import { toast } from "react-toastify";
 import { backgroundImage } from "../../assets/img";
 
 const DonateDes = () => {
+  const [message, setMessage] = useState("");
+  const handleSubmit = () => {
+    console.log("sa");
+    if (message === "") {
+      toast.error("Message is required");
+    } else {
+      toast.success("You Request is successful");
+    }
+  };
   return (
     <>
       <section class="body-font text-gray-600">
@@ -34,10 +44,14 @@ const DonateDes = () => {
                   id="hero-field"
                   name="hero-field"
                   placeholder="What are you donate in this time..."
+                  onChange={(e) => setMessage(e.target.value)}
                   class="w-full rounded border border-gray-300 bg-gray-100 bg-opacity-50 py-1 px-3 text-base leading-8 text-gray-700 outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200"
                 />
               </div>
-              <button class="inline-flex rounded border-0 bg-indigo-500 py-2 px-6 text-lg text-white hover:bg-indigo-600 focus:outline-none">
+              <button
+                class="inline-flex rounded border-0 bg-indigo-500 py-2 px-6 text-lg text-white hover:bg-indigo-600 focus:outline-none"
+                onClick={handleSubmit}
+              >
                 Request
               </button>
             </div>

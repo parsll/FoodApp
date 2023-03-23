@@ -5,6 +5,7 @@ import db from "./config/Database/database";
 import adminRoutes from "./routes/Admin.routes";
 import donationRoutes from "./routes/Donation.routes";
 import cors from "cors";
+import path from "path";
 
 const app = express();
 
@@ -49,4 +50,12 @@ app.use("/api/v1/admin", adminRoutes);
 app.use("/api/v1/user", userRoutes);
 app.use("/api/v1/donate", donationRoutes);
 
+app.use(express.static("build"));
+app.use("*", (req: Request, res: Response) => {
+  res.sendFile(path.resolve(__dirname, "build", "index.html"));
+});
+
+app.use("*", (req: Request, res: Response) => {
+  return res.send("The Page isn't available in the website");
+});
 app.listen(9001);
