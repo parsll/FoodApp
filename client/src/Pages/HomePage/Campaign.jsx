@@ -1,5 +1,11 @@
 import React from "react";
-import { backgroundImage } from "../../assets/img";
+import {
+  backgroundImage,
+  backgroundImage10,
+  backgroundImage7,
+  backgroundImage8,
+  backgroundImage9,
+} from "../../assets/img";
 
 const Campaign = () => {
   return (
@@ -28,7 +34,7 @@ const Campaign = () => {
                 <div className="rounded-lg bg-gray-100 p-6">
                   <img
                     className="mb-6 h-40 w-full rounded object-cover object-center"
-                    src={backgroundImage}
+                    src={backgroundImage10}
                     alt="content"
                   />
                   <h3 className="title-font text-xs font-medium tracking-widest text-indigo-500">
@@ -47,7 +53,7 @@ const Campaign = () => {
                 <div className="rounded-lg bg-gray-100 p-6">
                   <img
                     className="mb-6 h-40 w-full rounded object-cover object-center"
-                    src={backgroundImage}
+                    src={backgroundImage7}
                     alt="content"
                   />
                   <h3 className="title-font text-xs font-medium tracking-widest text-indigo-500">
@@ -66,7 +72,7 @@ const Campaign = () => {
                 <div className="rounded-lg bg-gray-100 p-6">
                   <img
                     className="mb-6 h-40 w-full rounded object-cover object-center"
-                    src={backgroundImage}
+                    src={backgroundImage8}
                     alt="content"
                   />
                   <h3 className="title-font text-xs font-medium tracking-widest text-indigo-500">
@@ -85,7 +91,7 @@ const Campaign = () => {
                 <div className="rounded-lg bg-gray-100 p-6">
                   <img
                     className="mb-6 h-40 w-full rounded object-cover object-center"
-                    src={backgroundImage}
+                    src={backgroundImage9}
                     alt="content"
                   />
                   <h3 className="title-font text-xs font-medium tracking-widest text-indigo-500">

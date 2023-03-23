@@ -20,17 +20,14 @@ const Founders = () => {
                 <div className="">
                   <div className="">
                     <h1 className="title-font text-center text-lg font-medium text-gray-900 ">
-                      Korean Me
+                      Shibaa Adhikari
                     </h1>
                     <h2 className="title-font mb-1 px-3 text-center text-xs font-medium tracking-widest text-gray-600">
-                      Designer
+                      Developer
                     </h2>
                   </div>
                   <p className="mb-3 text-justify leading-relaxed">
-                    Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit.Lorem ipsum dolor sit amet consectetur adipisicing elit
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit
-                    Blanditiis numquam iusto aspernatur fuga.
+                    Premium developer with 5 years of experience.
                   </p>
                 </div>
               </div>
@@ -45,17 +42,14 @@ const Founders = () => {
                 <div className="">
                   <div className="">
                     <h1 className="title-font text-center text-lg font-medium text-gray-900 ">
-                      Korean Me
+                      Ajju Maharjan
                     </h1>
                     <h2 className="title-font mb-1 px-3 text-center text-xs font-medium tracking-widest text-gray-600">
                       Designer
                     </h2>
                   </div>
                   <p className="mb-3 text-justify leading-relaxed">
-                    Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit.Lorem ipsum dolor sit amet consectetur adipisicing elit
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit
-                    Blanditiis numquam iusto aspernatur fuga.
+                    Designer since 5years.
                   </p>
                 </div>
               </div>
@@ -70,17 +64,14 @@ const Founders = () => {
                 <div className="">
                   <div className="">
                     <h1 className="title-font text-center text-lg font-medium text-gray-900 ">
-                      Korean Me
+                      Surya Narayan Chaudhary
                     </h1>
                     <h2 className="title-font mb-1 px-3 text-center text-xs font-medium tracking-widest text-gray-600">
-                      Designer
+                      Developer
                     </h2>
                   </div>
                   <p className="mb-3 text-justify leading-relaxed">
-                    Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit.Lorem ipsum dolor sit amet consectetur adipisicing elit
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit
-                    Blanditiis numquam iusto aspernatur fuga.
+                    Developer of the year.
                   </p>
                 </div>
               </div>
@@ -93,10 +84,13 @@ const Founders = () => {
               Why it works ?
             </h1>
             <p class="mb-8 text-justify leading-relaxed">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae,
-              quos voluptatum error nesciunt quis dolore, debitis cum placeat
-              dignissimos molestiae expedita. Placeat sint in alias distinctio
-              sunt, qui dolorem corrupti doloribus quis ullam delectus iusto
+              Food Share Nepal is an internet based platform which connects
+              people with excess food and groceries to the people in need in
+              minimum cost. It promotes social and economic sustainability. Our
+              team is working to reduce hunger rate, food wastage and food
+              insecurity in the country.Our goal is to build stronger
+              communities by fostering connections between people and
+              organizations.
             </p>
             <div class="flex w-full items-end justify-center md:justify-start"></div>
           </div>

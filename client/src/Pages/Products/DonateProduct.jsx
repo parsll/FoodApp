@@ -1,6 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { backgroundImage } from "../../assets/img";
+import {
+  backgroundImage,
+  backgroundImage12,
+  backgroundImage4,
+  backgroundImage6,
+} from "../../assets/img";
 
 const DonateProduct = () => {
   return (
@@ -24,23 +29,21 @@ const DonateProduct = () => {
                     <img
                       alt="team"
                       class="h-full w-full flex-shrink-0 rounded-lg object-cover object-center"
-                      src={backgroundImage}
+                      src={backgroundImage4}
                     />
                   </div>
                 </Link>
                 <div class="flex-grow sm:pl-8">
                   <h2 class="title-font text-lg font-medium text-gray-900">
-                    Organization
+                    Solti Hotel
                   </h2>
                   <h3 class="mb-3 text-gray-500">Chabahil, Kathmandu</h3>
                   <p class="mb-4">
-                    The donation consists of a one-time serving of food that can
-                    feed approximately 20 people. This high-quality food has
-                    been carefully prepared and is guaranteed safe for
-                    consumption without any risk of contamination.
+                    The donation in the hotel consist pf high quality food for
+                    upto 100 people.The route to the campaign is very easy and
+                    you can easily pickup the food
                   </p>
                   <div class="flex justify-between">
-                    <span>NRs. 000</span>
                     <span>2077 / 11 / 20</span>
                   </div>
                 </div>
@@ -53,23 +56,22 @@ const DonateProduct = () => {
                     <img
                       alt="team"
                       class="h-full w-full flex-shrink-0 rounded-lg object-cover object-center"
-                      src={backgroundImage}
+                      src={backgroundImage6}
                     />
                   </div>
                 </Link>
                 <div class="flex-grow sm:pl-8">
                   <h2 class="title-font text-lg font-medium text-gray-900">
-                    Organization
+                    Tudikhel
                   </h2>
-                  <h3 class="mb-3 text-gray-500">Chabahil, Kathmandu</h3>
+                  <h3 class="mb-3 text-gray-500">Tudikhel, Kathmandu</h3>
                   <p class="mb-4">
-                    The donation consists of a one-time serving of food that can
-                    feed approximately 20 people. This high-quality food has
-                    been carefully prepared and is guaranteed safe for
-                    consumption without any risk of contamination.
+                    The food consist of very nutritious and is for upto 1000
+                    people. The campaign happend every 3 month can genrally
+                    happens on last saturday of the month
                   </p>
                   <div class="flex justify-between">
-                    <span>NRs. 20,000</span>
+                    <span>NRs. 2,000</span>
                     <span>2077 / 11 / 20</span>
                   </div>
                 </div>
@@ -82,15 +84,15 @@ const DonateProduct = () => {
                     <img
                       alt="team"
                       class="h-full w-full flex-shrink-0 rounded-lg object-cover object-center"
-                      src={backgroundImage}
+                      src={backgroundImage12}
                     />
                   </div>
                 </Link>
                 <div class="flex-grow sm:pl-8">
                   <h2 class="title-font text-lg font-medium text-gray-900">
-                    Organization
+                    Mulpani
                   </h2>
-                  <h3 class="mb-3 text-gray-500">Chabahil, Kathmandu</h3>
+                  <h3 class="mb-3 text-gray-500">Mulpani, Kathmandu</h3>
                   <p class="mb-4">
                     The donation consists of a one-time serving of food that can
                     feed approximately 20 people. This high-quality food has

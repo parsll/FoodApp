@@ -1,6 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { backgroundImage } from "../../assets/img";
+import {
+  backgroundImage,
+  backgroundImage3,
+  backgroundImage6,
+  backgroundImage7,
+} from "../../assets/img";
 
 const RequestProduct = () => {
   return (
@@ -24,7 +29,7 @@ const RequestProduct = () => {
                     <img
                       alt="team"
                       class="h-full w-full flex-shrink-0 rounded-lg object-cover object-center"
-                      src={backgroundImage}
+                      src={backgroundImage6}
                     />
                   </div>
                 </Link>
@@ -53,24 +58,22 @@ const RequestProduct = () => {
                     <img
                       alt="team"
                       class="h-full w-full flex-shrink-0 rounded-lg object-cover object-center"
-                      src={backgroundImage}
+                      src={backgroundImage7}
                     />
                   </div>
                 </Link>
                 <div class="flex-grow sm:pl-8">
                   <h2 class="title-font text-lg font-medium text-gray-900">
-                    Organization
+                    Hyatt Hotel
                   </h2>
-                  <h3 class="mb-3 text-gray-500">Chabahil, Kathmandu</h3>
+                  <h3 class="mb-3 text-gray-500">Boudha, Kathmandu</h3>
                   <p class="mb-4">
-                    The donation consists of a one-time serving of food that can
-                    feed approximately 20 people. This high-quality food has
-                    been carefully prepared and is guaranteed safe for
-                    consumption without any risk of contamination.
+                    This consist of high quality food for upto 100 peoples and
+                    is generally in for pickup at Hyatt Nepal. This is generally
+                    to distribute in other places and upfront request
                   </p>
                   <div class="flex justify-between">
-                    <span>NRs. 000</span>
-                    <span>2077 / 11 / 20</span>
+                    <span>2079 / 12 / 20</span>
                   </div>
                 </div>
               </div>
@@ -82,23 +85,23 @@ const RequestProduct = () => {
                     <img
                       alt="team"
                       class="h-full w-full flex-shrink-0 rounded-lg object-cover object-center"
-                      src={backgroundImage}
+                      src={backgroundImage3}
                     />
                   </div>
                 </Link>
                 <div class="flex-grow sm:pl-8">
                   <h2 class="title-font text-lg font-medium text-gray-900">
-                    Organization
+                    Thamel
                   </h2>
                   <h3 class="mb-3 text-gray-500">Chabahil, Kathmandu</h3>
                   <p class="mb-4">
-                    The donation consists of a one-time serving of food that can
-                    feed approximately 20 people. This high-quality food has
+                    The donation consists of a two-time serving of food that can
+                    feed approximately 50 people. This high-quality food has
                     been carefully prepared and is guaranteed safe for
                     consumption without any risk of contamination.
                   </p>
                   <div class="flex justify-between">
-                    <span>NRs. 000</span>
+                    <span>NRs. 10000</span>
                     <span>2077 / 11 / 20</span>
                   </div>
                 </div>

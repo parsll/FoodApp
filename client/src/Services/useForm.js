@@ -125,7 +125,6 @@ export const useForm = (initialStates) => {
     //   const value = fieldValues[key];
     //   if (!temp[key]) {
     //     // Only apply default validation if no other validation error exists
-
     //     if (!value.trim()) {
     //       console.log("aher");
     //       temp[key] = "This field is required";

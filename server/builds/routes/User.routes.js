@@ -1,0 +1,16 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const User_controller_1 = require("../controllers/User.controller");
+const SchemaParser_1 = require("../middlewares/SchemaParser");
+const User_schema_1 = require("../Schema/User.schema");
+const router = (0, express_1.Router)();
+router.get("/all", User_controller_1.getAllUsersContoller);
+router.post("/login", User_controller_1.loginUsersContoller);
+router.post("/register", User_controller_1.registerUserController);
+router.post("/verifyotp", (0, SchemaParser_1.validate)({ schema: User_schema_1.tokenBodySchema.body, typeOfReq: "Body" }), User_controller_1.verifyOtpController);
+router.post("/resendotp", (0, SchemaParser_1.validate)({ schema: User_schema_1.resendTokenBodySchema.body, typeOfReq: "Body" }), User_controller_1.resendOtpController);
+router.post("/forgotpassword", (0, SchemaParser_1.validate)({ schema: User_schema_1.forgotPasswordBodySchema.body, typeOfReq: "Body" }), User_controller_1.forgotPasswordController);
+router.post("/verifyfpotp", (0, SchemaParser_1.validate)({ schema: User_schema_1.verifyfpotpBodySchema.body, typeOfReq: "Body" }), User_controller_1.verifyFpOtpController);
+router.post("/resetpassword", (0, SchemaParser_1.validate)({ schema: User_schema_1.resetPasswordSchema.body, typeOfReq: "Body" }), User_controller_1.resetPasswordController);
+exports.default = router;

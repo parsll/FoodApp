@@ -1,5 +1,11 @@
 import React from "react";
-import { backgroundImage } from "../../assets/img";
+import {
+  backgroundImage,
+  backgroundImage12,
+  backgroundImage13,
+  backgroundImage14,
+  backgroundImage2,
+} from "../../assets/img";
 
 const Motto = () => {
   return (
@@ -14,7 +20,7 @@ const Motto = () => {
                   <img
                     alt="ecommerce"
                     className="block h-full w-full object-cover object-center"
-                    src={backgroundImage}
+                    src={backgroundImage12}
                   />
                 </a>
                 <div className="mt-4">
@@ -28,7 +34,7 @@ const Motto = () => {
                   <img
                     alt="ecommerce"
                     className="block h-full w-full object-cover object-center"
-                    src={backgroundImage}
+                    src={backgroundImage13}
                   />
                 </a>
                 <div className="mt-4">
@@ -42,7 +48,7 @@ const Motto = () => {
                   <img
                     alt="ecommerce"
                     className="block h-full w-full object-cover object-center"
-                    src={backgroundImage}
+                    src={backgroundImage14}
                   />
                 </a>
                 <div className="mt-4">
@@ -56,7 +62,7 @@ const Motto = () => {
                   <img
                     alt="ecommerce"
                     className="block h-full w-full object-cover object-center"
-                    src={backgroundImage}
+                    src={backgroundImage2}
                   />
                 </a>
                 <div className="mt-4">

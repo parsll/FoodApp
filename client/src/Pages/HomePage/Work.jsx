@@ -1,5 +1,5 @@
 import React from "react";
-import { backgroundImage } from "../../assets/img";
+import { backgroundImage, backgroundImage6 } from "../../assets/img";
 
 const Work = () => {
   return (
@@ -14,7 +14,7 @@ const Work = () => {
               <img
                 alt="food"
                 class="h-64 w-full rounded object-cover object-center lg:h-auto lg:w-1/2"
-                src={backgroundImage}
+                src={backgroundImage6}
               />
               <div class="mt-6 flex w-full items-end lg:mt-0 lg:w-1/2 lg:py-6 lg:pl-10">
                 <div className="flex-col">
@@ -22,9 +22,11 @@ const Work = () => {
                     Social Work
                   </h1>
                   <p class="leading-relaxed">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Blanditiis excepturi cupiditate sunt labore eaque voluptatum
-                    autem numquam dicta eum possimus.
+                    Food Share Nepal organizes various campaings and food
+                    distribution projects. Our team has succesfully completed
+                    food and groceries distribution to the needy people. In
+                    addition to this, Food Share Nepal has been doing Meal
+                    Sponshorship Campaign and Donate to feed a family.
                   </p>
                 </div>
               </div>
