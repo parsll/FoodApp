@@ -8,6 +8,7 @@ import {
   resendTokenBodyType,
   resetPasswordType,
   tokenBodyType,
+  userProfileBodyType,
   verifyfpotpBodyType,
 } from "../Schema/User.schema";
 
@@ -21,20 +22,27 @@ import {
   forgotPasswordService,
   verifyFpOtpService,
   resetPassswordService,
+  getUserProfileService,
 } from "../services/User.service";
 
 export const registerUserController = async (
   req: Request<{}, {}, Omit<registerBodyType, "confirmPassword">>,
   res: Response
 ) => {
+  const { phone, role, address, email, password, firstname, lastname } =
+    req.body;
+  const image: any = req.file?.filename;
   try {
-    const { email, password, firstname, lastname } = req.body;
-    const response = await createUserService({
+    const response = await createUserService(
       email,
       password,
       firstname,
       lastname,
-    });
+      address,
+      role,
+      phone,
+      image
+    );
 
     if (typeof response === "string") return res.send(response).status(400);
 
@@ -46,7 +54,7 @@ export const registerUserController = async (
     if (typeof error === "string") {
       return res.status(400).send(error);
     }
-    return res.status(400).send("Error while Registration");
+    return res.status(400).send(error);
   }
 };
 
@@ -157,6 +165,20 @@ export const resetPasswordController = async (
 export const getAllUsersContoller = async (req: Request, res: Response) => {
   try {
     const response = await getAllUserService();
+    res.status(200).send(response);
+  } catch (error) {
+    logger.error(JSON.stringify(error));
+    res.status(400).send("Error");
+  }
+};
+
+export const getUserProfileController = async (
+  req: Request<{}, {}, userProfileBodyType>,
+  res: Response
+) => {
+  const { username } = req.body;
+  try {
+    const response = await getUserProfileService({ username });
     res.status(200).send(response);
   } catch (error) {
     logger.error(JSON.stringify(error));

@@ -25,18 +25,18 @@ app.get("/ping", (req: Request, res: Response) => {
   res.send("Healthy").status(200);
 });
 
-app.use((req: Request, res: Response, next: NextFunction) => {
-  console.info(
-    `Incoming-> Method: [ ${req.method}] url:[${req.url}] IP: [${req.socket.remoteAddress}]`
-  );
+// app.use((req: Request, res: Response, next: NextFunction) => {
+//   console.info(
+//     `Incoming-> Method: [ ${req.method}] url:[${req.url}] IP: [${req.socket.remoteAddress}]`
+//   );
 
-  res.on("finish", () => {
-    console.info(
-      `Incoming-> Method: [ ${req.method}] url:[${req.url}] IP: [${req.socket.remoteAddress}]  status:[${res.status}]`
-    );
-  });
-  next();
-});
+//   res.on("finish", () => {
+//     console.info(
+//       `Incoming-> Method: [ ${req.method}] url:[${req.url}] IP: [${req.socket.remoteAddress}]  status:[${res.status}]`
+//     );
+//   });
+//   next();
+// });
 process.once("SIGUSR2", function () {
   process.kill(process.pid, "SIGUSR2");
 });
@@ -50,6 +50,7 @@ app.use("/api/v1/admin", adminRoutes);
 app.use("/api/v1/user", userRoutes);
 app.use("/api/v1/donate", donationRoutes);
 
+
 app.use(express.static("build"));
 app.use("*", (req: Request, res: Response) => {
   res.sendFile(path.resolve(__dirname, "build", "index.html"));
@@ -59,3 +60,4 @@ app.use("*", (req: Request, res: Response) => {
   return res.send("The Page isn't available in the website");
 });
 app.listen(9001);
+

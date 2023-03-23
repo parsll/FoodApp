@@ -2,6 +2,12 @@ import { Router } from "express";
 import { DonationModel } from "../Model/Donation.model";
 import crypto from "crypto";
 import { sendMail, sendMessageMail } from "../config/Mailer/Mailer";
+import { authenticateToken } from "../middlewares/Authentication";
+import {
+  donateController,
+  readAllTypeController,
+  requestController,
+} from "../controllers/Donation.controller";
 const router = Router();
 
 router.post("/", async (req, res) => {
@@ -37,5 +43,9 @@ router.post("/", async (req, res) => {
     res.status(400).send("Error while donation");
   }
 });
+
+router.post("/request", authenticateToken, requestController);
+router.post("/donation", authenticateToken, donateController);
+router.get("/readalltype", readAllTypeController);
 
 export default router;

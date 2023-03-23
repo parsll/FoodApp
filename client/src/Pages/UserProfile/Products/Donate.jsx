@@ -133,10 +133,9 @@ const Donate = () => {
             </div>
 
             <button
-              class="rounded border-0 bg-indigo-500 py-2 px-8 text-lg text-white hover:bg-opacity-70 focus:outline-none"
+              class="rounded border-0 bg-primary py-2 px-8 text-lg text-white hover:bg-opacity-70 focus:outline-none"
               onClick={handleSubmit}
             >
-
               Donate
             </button>
             <p class="mt-3 text-xs text-gray-500">
