@@ -1,4 +1,4 @@
-import { food, profile, profile1 } from "../assets/img";
+import { aashish, ajju, food, nischal, prajwol, profile, profile1, raaj, sagar, santosh, shibaa, surya } from "../assets/img";
 import Footer from "../Components/Footer/Footer";
 
 const Founders = () => {
@@ -13,7 +13,7 @@ const Founders = () => {
                 <div className="mx-auto h-[13rem] w-[13rem] overflow-hidden rounded-lg">
                   <img
                     className="h-full w-full rounded-lg object-cover object-center"
-                    src={profile1}
+                    src={shibaa}
                     alt="blog"
                   />
                 </div>
@@ -23,11 +23,11 @@ const Founders = () => {
                       Shibaa Adhikari
                     </h1>
                     <h2 className="title-font mb-1 px-3 text-center text-xs font-medium tracking-widest text-gray-600">
-                      Developer
+                      Project Manager
                     </h2>
                   </div>
                   <p className="mb-3 text-justify leading-relaxed">
-                    Premium developer with 5 years of experience.
+                    Working as a Project Manager on a very popular company named crupee.
                   </p>
                 </div>
               </div>
@@ -35,7 +35,7 @@ const Founders = () => {
                 <div className="mx-auto h-[13rem] w-[13rem] overflow-hidden rounded-lg">
                   <img
                     className="h-full w-full rounded-lg object-cover object-center"
-                    src={profile}
+                    src={ajju}
                     alt="blog"
                   />
                 </div>
@@ -49,7 +49,139 @@ const Founders = () => {
                     </h2>
                   </div>
                   <p className="mb-3 text-justify leading-relaxed">
-                    Designer since 5years.
+                    The very first designer of a popular mobile skin company wrapsy.
+                  </p>
+                </div>
+              </div>
+              <div className="mx-auto w-[17rem] rounded-xl bg-[#f5f5f5] p-4 md:w-[20rem]">
+                <div className="mx-auto h-[13rem] w-[13rem] overflow-hidden rounded-lg">
+                  <img
+                    className="h-full w-full rounded-lg object-cover object-center"
+                    src={prajwol}
+                    alt="blog"
+                  />
+                </div>
+                <div className="">
+                  <div className="">
+                    <h1 className="title-font text-center text-lg font-medium text-gray-900 ">
+                      Prajwol Lama
+                    </h1>
+                    <h2 className="title-font mb-1 px-3 text-center text-xs font-medium tracking-widest text-gray-600">
+                      App Developer
+                    </h2>
+                  </div>
+                  <p className="mb-3 text-justify leading-relaxed">
+                    Developing app since 5 years and gained experience in a very popular company dearwalk.
+                  </p>
+                </div>
+              </div>
+              <div className="mx-auto w-[17rem] rounded-xl bg-[#f5f5f5] p-4 md:w-[20rem]">
+                <div className="mx-auto h-[13rem] w-[13rem] overflow-hidden rounded-lg">
+                  <img
+                    className="h-full w-full rounded-lg object-cover object-center"
+                    src={sagar}
+                    alt="blog"
+                  />
+                </div>
+                <div className="">
+                  <div className="">
+                    <h1 className="title-font text-center text-lg font-medium text-gray-900 ">
+                      Sagar Khadka
+                    </h1>
+                    <h2 className="title-font mb-1 px-3 text-center text-xs font-medium tracking-widest text-gray-600">
+                      Back-End Developer
+                    </h2>
+                  </div>
+                  <p className="mb-3 text-justify leading-relaxed">
+                    Working on a software company named reflexit and gained experience about 5 years as a full stack developer.
+                  </p>
+                </div>
+              </div>
+              <div className="mx-auto w-[17rem] rounded-xl bg-[#f5f5f5] p-4 md:w-[20rem]">
+                <div className="mx-auto h-[13rem] w-[13rem] overflow-hidden rounded-lg">
+                  <img
+                    className="h-full w-full rounded-lg object-cover object-center"
+                    src={aashish}
+                    alt="blog"
+                  />
+                </div>
+                <div className="">
+                  <div className="">
+                    <h1 className="title-font text-center text-lg font-medium text-gray-900 ">
+                      Aashish Pokherel
+                    </h1>
+                    <h2 className="title-font mb-1 px-3 text-center text-xs font-medium tracking-widest text-gray-600">
+                      App Developer
+                    </h2>
+                  </div>
+                  <p className="mb-3 text-justify leading-relaxed">
+                    Developing app since 4 years and launching more than 5 useful apps on playstore.
+                  </p>
+                </div>
+              </div>
+              <div className="mx-auto w-[17rem] rounded-xl bg-[#f5f5f5] p-4 md:w-[20rem]">
+                <div className="mx-auto h-[13rem] w-[13rem] overflow-hidden rounded-lg">
+                  <img
+                    className="h-full w-full rounded-lg object-cover object-center"
+                    src={nischal}
+                    alt="blog"
+                  />
+                </div>
+                <div className="">
+                  <div className="">
+                    <h1 className="title-font text-center text-lg font-medium text-gray-900 ">
+                      Nischal Aacharya
+                    </h1>
+                    <h2 className="title-font mb-1 px-3 text-center text-xs font-medium tracking-widest text-gray-600">
+                      Back-End Developer
+                    </h2>
+                  </div>
+                  <p className="mb-3 text-justify leading-relaxed">
+                    Developing websites with very own ideas and deploy on internet, since 5 years.
+                  </p>
+                </div>
+              </div>
+              <div className="mx-auto w-[17rem] rounded-xl bg-[#f5f5f5] p-4 md:w-[20rem]">
+                <div className="mx-auto h-[13rem] w-[13rem] overflow-hidden rounded-lg">
+                  <img
+                    className="h-full w-full rounded-lg object-cover object-center"
+                    src={raaj}
+                    alt="blog"
+                  />
+                </div>
+                <div className="">
+                  <div className="">
+                    <h1 className="title-font text-center text-lg font-medium text-gray-900 ">
+                      Raj Kumar Shrestha
+                    </h1>
+                    <h2 className="title-font mb-1 px-3 text-center text-xs font-medium tracking-widest text-gray-600">
+                      Editor
+                    </h2>
+                  </div>
+                  <p className="mb-3 text-justify leading-relaxed">
+                    5 years of experience in a video editing field and making video day to day by teaching about editing video through youtube. 
+                  </p>
+                </div>
+              </div>
+              <div className="mx-auto w-[17rem] rounded-xl bg-[#f5f5f5] p-4 md:w-[20rem]">
+                <div className="mx-auto h-[13rem] w-[13rem] overflow-hidden rounded-lg">
+                  <img
+                    className="h-full w-full rounded-lg object-cover object-center"
+                    src={santosh}
+                    alt="blog"
+                  />
+                </div>
+                <div className="">
+                  <div className="">
+                    <h1 className="title-font text-center text-lg font-medium text-gray-900 ">
+                      Santosh Ghimire
+                    </h1>
+                    <h2 className="title-font mb-1 px-3 text-center text-xs font-medium tracking-widest text-gray-600">
+                      Front-End Developer
+                    </h2>
+                  </div>
+                  <p className="mb-3 text-justify leading-relaxed">
+                    A student with frontend designing and developing knowledge. 
                   </p>
                 </div>
               </div>
@@ -64,14 +196,36 @@ const Founders = () => {
                 <div className="">
                   <div className="">
                     <h1 className="title-font text-center text-lg font-medium text-gray-900 ">
-                      Surya Narayan Chaudhary
+                      Lakpa Sherpa
                     </h1>
                     <h2 className="title-font mb-1 px-3 text-center text-xs font-medium tracking-widest text-gray-600">
-                      Developer
+                      Front-End Developer
                     </h2>
                   </div>
                   <p className="mb-3 text-justify leading-relaxed">
-                    Developer of the year.
+                    5 years of experience in a related field.
+                  </p>
+                </div>
+              </div>
+              <div className="mx-auto w-[17rem] rounded-xl bg-[#f5f5f5] p-4 md:w-[20rem]">
+                <div className="mx-auto h-[13rem] w-[13rem] overflow-hidden rounded-lg">
+                  <img
+                    className="h-full w-full rounded-lg object-cover object-center"
+                    src={surya}
+                    alt="blog"
+                  />
+                </div>
+                <div className="">
+                  <div className="">
+                    <h1 className="title-font text-center text-lg font-medium text-gray-900 ">
+                      Surya Narayan Chaudhary
+                    </h1>
+                    <h2 className="title-font mb-1 px-3 text-center text-xs font-medium tracking-widest text-gray-600">
+                      DBA
+                    </h2>
+                  </div>
+                  <p className="mb-3 text-justify leading-relaxed">
+                    Database Administrator with such a good talent.
                   </p>
                 </div>
               </div>
